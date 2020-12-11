@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/wpdev/Sites/tic-tac-toe/backend/src/logs/error/.0587354aea16fb384e563820b64c475430095f81-audit.json",
+    "files": [
+        {
+            "date": 1607714768772,
+            "name": "/Users/wpdev/Sites/tic-tac-toe/backend/src/logs/error/2020-12-12.error.log",
+            "hash": "a8ab9cf6f59d3aa4f947b02ab562e46d"
+        }
+    ]
+}
