@@ -13,6 +13,10 @@ class IndexRoute implements Route {
 
   private initializeRoutes() {
     this.router.get(`${this.path}`, this.indexController.index);
+    this.router.get(`${this.path}reset`, this.indexController.reset);
+    this.router.get(`${this.path}tick`, this.indexController.tick);
+    this.router.get(`${this.path}game-state`, this.indexController.gameState);
+    this.router.get(`${this.path}game-log`, this.indexController.gameLog);
   }
 }
 

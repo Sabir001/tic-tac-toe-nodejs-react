@@ -58,3 +58,5 @@ Error: listen EADDRINUSE: address already in use :::4000
     at Module.m._compile (/Users/wpdev/Sites/tic-tac-toe/backend/node_modules/ts-node/src/index.ts:1056:23)
     at Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
     at Object.require.extensions.<computed> [as .ts] (/Users/wpdev/Sites/tic-tac-toe/backend/node_modules/ts-node/src/index.ts:1059:12)
+2020-12-12 03:02:50 error: StatusCode : 500, Message : Cannot set headers after they are sent to the client
+2020-12-12 03:02:57 error: StatusCode : 500, Message : Cannot set headers after they are sent to the client

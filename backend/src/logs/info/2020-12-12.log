@@ -36,3 +36,21 @@
 2020-12-12 02:42:40 info: 🚀 App listening on the port 4001
 2020-12-12 02:42:54 info: [0mGET / [36m304[0m 3.520 ms - -[0m
 2020-12-12 02:42:59 info: [0mGET / [32m200[0m 1.442 ms - 2[0m
+2020-12-12 03:02:11 info: 🚀 App listening on the port 4001
+2020-12-12 03:02:24 info: [0mGET / [36m304[0m 4.114 ms - -[0m
+2020-12-12 03:02:29 info: [0mGET /reset [33m404[0m 2.040 ms - 144[0m
+2020-12-12 03:02:46 info: 🚀 App listening on the port 4001
+2020-12-12 03:02:50 info: [0mGET /reset [32m200[0m 4.396 ms - 2[0m
+2020-12-12 03:02:50 error: StatusCode : 500, Message : Cannot set headers after they are sent to the client
+2020-12-12 03:02:57 info: [0mGET /reset [32m200[0m 0.831 ms - 2[0m
+2020-12-12 03:02:57 error: StatusCode : 500, Message : Cannot set headers after they are sent to the client
+2020-12-12 03:03:18 info: 🚀 App listening on the port 4001
+2020-12-12 03:03:24 info: [0mGET /reset [32m200[0m 6.998 ms - 30[0m
+2020-12-12 03:05:35 info: 🚀 App listening on the port 4001
+2020-12-12 03:05:42 info: [0mGET /reset [32m200[0m 15.934 ms - 44[0m
+2020-12-12 03:06:54 info: 🚀 App listening on the port 4001
+2020-12-12 03:07:05 info: 🚀 App listening on the port 4001
+2020-12-12 03:08:21 info: 🚀 App listening on the port 4001
+2020-12-12 03:08:36 info: 🚀 App listening on the port 4001
+2020-12-12 03:09:16 info: 🚀 App listening on the port 4001
+2020-12-12 03:09:49 info: 🚀 App listening on the port 4001
