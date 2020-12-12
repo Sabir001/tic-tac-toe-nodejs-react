@@ -1,0 +1,14 @@
+export const RESET: string = 'RESET';
+export const RESET_SUCCESS: string = 'RESET_SUCCESS';
+export const RESET_FAILURE: string = 'RESET_FAILURE';
+export const TICK: string = 'TICK';
+export const TICK_SUCCESS: string = 'TICK_SUCCESS';
+export const TICK_FAILURE: string = 'TICK_FAILURE';
+export const SHOW_LOADING_MESSAGE: string = 'SHOW_LOADING_MESSAGE';
+export const HIDE_LOADING_MESSAGE: string = 'HIDE_LOADING_MESSAGE';
+export const GET_GAME_STATE: string = 'GET_GAME_STATE';
+export const GET_GAME_STATE_SUCCESS: string = 'GET_GAME_STATE_SUCCESS';
+export const GET_GAME_STATE_FAILURE: string = 'GET_GAME_STATE_FAILURE';
+export const GET_GAME_LOG: string = 'GET_GAME_LOG';
+export const GET_GAME_LOG_SUCCESS: string = 'GET_GAME_LOG_SUCCESS';
+export const GET_GAME_LOG_FAILURE: string = 'GET_GAME_LOG_FAILURE';
