@@ -1,11 +1,21 @@
 import React from 'react';
-import { Container, TitleText } from './LayoutStyles';
+import GameBoard from './GameBoard';
+import { Section, TitleText } from './LayoutStyles';
+import GameLog from './GameLog';
 
 function App() {
   return (
-    <Container>
-      <TitleText>Tic Tac Toe</TitleText>
-    </Container>
+    <>
+      <Section>
+        <TitleText>Tic Tac Toe</TitleText>
+      </Section>
+      <Section>
+        <GameBoard />
+      </Section>
+      <Section>
+        <GameLog />
+      </Section>
+    </>
   );
 }
 

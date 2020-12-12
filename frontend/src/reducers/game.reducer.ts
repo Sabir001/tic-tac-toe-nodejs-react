@@ -9,7 +9,7 @@ const initialState = {
   gameLog: [],
 };
 
-export function ticTacToe(state: any, action: any): any {
+export function ticTacToe(state: any = initialState, action: any): any {
   switch (action.type) {
     case RESET:
       return { ...initialState };

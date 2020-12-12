@@ -1,14 +1,27 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-
-import { mark, getGameState, reset } from '../../actions/game.action';
-
+import styled from 'styled-components';
+import { getGameState, mark, reset } from '../../actions/game.action';
 import GameCell from '../GameCell';
+
+const Board = styled.div`
+  .game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 320px;
+    height: 320px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    padding: 3px 2px 0px 3px;
+    align-items: center;
+  }
+`;
 
 function Grid({ getGameState, grid, gameOver, owner, mark, reset }: any) {
   useEffect(() => {
     getGameState();
-  }, []);
+  }, [getGameState]);
 
   const getCellOwner = (xAxis: number, yAxis: number) => {
     if (grid !== null) {
@@ -38,21 +51,25 @@ function Grid({ getGameState, grid, gameOver, owner, mark, reset }: any) {
 
   if (gameOver) {
     return (
-      <div>
+      <Board>
         <button onClick={() => reset()}>Restart!</button>
-      </div>
+      </Board>
     );
   }
 
-  return <div>{generateGameBoard(3)}</div>;
+  return (
+    <Board>
+      <div className="game-board">{generateGameBoard(3)}</div>
+    </Board>
+  );
 }
 
 const mapStateToProps = (state: any) => {
   return {
-    loading: state.ticTacToe.loading,
-    owner: state.ticTacToe.turn,
-    gameOver: state.ticTacToe.gameOver,
-    grid: state.ticTacToe.gridData,
+    loading: state.loading,
+    owner: state.turn,
+    gameOver: state.gameOver,
+    grid: state.gridData,
   };
 };
 

@@ -1,27 +1,41 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getGameLog } from '../../actions/game.action';
+import styled from 'styled-components';
+
+const LogArea = styled.div`
+  padding: 10px;
+  background: rgba(100, 100, 100, 0.1);
+
+  div {
+    font-size: 16px;
+  }
+`;
 
 export const GameLog = ({ gameLog, getLog }: any) => {
   useEffect(() => {
     getLog();
   }, []);
 
+  if (!gameLog || gameLog.length === 0) {
+    return <></>;
+  }
+
   return (
-    <div>
-      <div>
-        {gameLog &&
-          gameLog.map((log: any, index: number) => (
-            <div key={index}>{log.message}</div>
-          ))}
-      </div>
-    </div>
+    <LogArea>
+      {gameLog.map((log: any, index: number) => (
+        <div key={index}>{log.message}</div>
+      ))}
+    </LogArea>
   );
 };
 
-const mapStateToProps = (state: any) => ({
-  gameLog: state.ticTacToe.gameLog,
-});
+const mapStateToProps = (state: any) => {
+  console.log(state);
+  return {
+    gameLog: state.gameLog,
+  };
+};
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
