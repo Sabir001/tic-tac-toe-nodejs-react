@@ -1,4 +1,11 @@
-import { HIDE_LOADING_MESSAGE, SHOW_LOADING_MESSAGE, RESET } from './constants';
+import {
+  HIDE_LOADING_MESSAGE,
+  SHOW_LOADING_MESSAGE,
+  RESET,
+  GET_GAME_LOG,
+  GET_GAME_STATE,
+  TICK,
+} from './constants';
 
 export function showLoading() {
   return {
@@ -15,5 +22,24 @@ export function hideLoading() {
 export function reset() {
   return {
     type: RESET,
+  };
+}
+
+export function getGameLog() {
+  return {
+    type: GET_GAME_LOG,
+  };
+}
+
+export function getGameState() {
+  return {
+    type: GET_GAME_STATE,
+  };
+}
+
+export function mark(value: any) {
+  return {
+    type: TICK,
+    payload: value,
   };
 }
