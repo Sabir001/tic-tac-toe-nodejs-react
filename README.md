@@ -25,3 +25,8 @@ Now your backend is running on port 4001
 - Run `yarn` command (You can `npm install`, too)
 - Run `yarn start` command (You can `npm start`, too) <br />
 Now your frontend is running on port 3000
+
+## Running back end test cases
+
+- Go to backend folder using `cd backend` command
+- Run `npm run test` command <br />
