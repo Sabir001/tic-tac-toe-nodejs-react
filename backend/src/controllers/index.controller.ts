@@ -35,7 +35,7 @@ class IndexController {
     try {
       if (this.gameBoard.setMark(parseInt(req.query.x), parseInt(req.query.y))) {
         const response = getResponseData(
-          `Index used  { x => ${req.query.x};  y => ${req.query.y} }. Now it's turn for "${this.gameBoard.getTurn()}"`,
+          `Used cell: { x => ${req.query.x};  y => ${req.query.y} }. Now turn for "${this.gameBoard.getTurn()}"`,
           this.gameBoard,
           this.gameLogs,
         );
