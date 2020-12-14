@@ -27,7 +27,7 @@ export function ticTacToe(state: any = initialState, action: any): any {
     case GET_GAME_STATE_SUCCESS:
       return { ...state, ...action.data };
     case GET_GAME_LOG_SUCCESS:
-      return { ...state, ...{ log: action.data } };
+      return { ...state, gameLog: action.data.log };
     default:
       return state;
   }
