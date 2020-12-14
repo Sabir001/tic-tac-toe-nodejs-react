@@ -1,5 +1,6 @@
 import compression from 'compression';
 import express from 'express';
+import cors from 'cors';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import morgan from 'morgan';
@@ -39,6 +40,7 @@ class App {
       this.app.use(morgan('dev', { stream }));
     }
 
+    this.app.use(cors({ origin: true, credentials: true }));
     this.app.use(hpp());
     this.app.use(helmet());
     this.app.use(compression());

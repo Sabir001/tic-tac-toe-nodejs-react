@@ -25,7 +25,7 @@ function GameCell({ takenBy, click, xAxis, yAxis, owner }: any) {
 
   const markHandler = (xAxis: number, yAxis: number, owner: any) => {
     setTakenBy(owner);
-    click(xAxis, yAxis);
+    click({ xAxis, yAxis });
   };
 
   return (
