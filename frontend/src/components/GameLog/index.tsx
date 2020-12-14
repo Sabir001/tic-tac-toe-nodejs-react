@@ -15,7 +15,7 @@ const LogArea = styled.div`
 export const GameLog = ({ gameLog, getLog }: any) => {
   useEffect(() => {
     getLog();
-  }, []);
+  }, [getLog]);
 
   if (!gameLog || gameLog.length === 0) {
     return <></>;
