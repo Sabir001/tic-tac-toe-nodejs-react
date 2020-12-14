@@ -24,14 +24,13 @@ export const GameLog = ({ gameLog, getLog }: any) => {
   return (
     <LogArea>
       {gameLog.map((log: any, index: number) => (
-        <div key={index}>{log.message}</div>
+        <div key={index}>{log}</div>
       ))}
     </LogArea>
   );
 };
 
 const mapStateToProps = (state: any) => {
-  console.log(state);
   return {
     gameLog: state.gameLog,
   };

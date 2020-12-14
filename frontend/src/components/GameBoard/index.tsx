@@ -41,7 +41,7 @@ function Grid({ getGameState, grid, gameOver, owner, mark, reset }: any) {
             owner={owner}
             click={mark}
             key={`${x} - ${y}`}
-            takenBy={getCellOwner(x, y)}
+            takenBy={getCellOwner}
           />
         );
       }

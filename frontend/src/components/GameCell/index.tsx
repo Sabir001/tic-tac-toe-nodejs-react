@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Cell = styled.div`
@@ -16,21 +16,16 @@ const Cell = styled.div`
   }
 `;
 
-function GameCell({ takenBy, click, xAxis, yAxis, owner }: any) {
-  const [cellTakenBy, setTakenBy] = useState(null);
+function GameCell({ takenBy, click, xAxis, yAxis }: any) {
+  const cellTakenBy = takenBy(xAxis, yAxis);
 
-  useEffect(() => {
-    setTakenBy(takenBy);
-  }, []);
-
-  const markHandler = (xAxis: number, yAxis: number, owner: any) => {
-    setTakenBy(owner);
+  const markHandler = (xAxis: number, yAxis: number): void => {
     click({ xAxis, yAxis });
   };
 
   return (
-    <Cell onClick={() => !cellTakenBy && markHandler(xAxis, yAxis, owner)}>
-      {takenBy && <span>{owner}</span>}
+    <Cell onClick={() => !cellTakenBy && markHandler(xAxis, yAxis)}>
+      {cellTakenBy && <span>{cellTakenBy}</span>}
     </Cell>
   );
 }

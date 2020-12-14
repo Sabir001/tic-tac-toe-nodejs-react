@@ -32,7 +32,6 @@ class IndexController {
   };
 
   public tick = (req: Request, res: Response, next: NextFunction): void => {
-    console.log(req);
     try {
       if (this.gameBoard.setMark(parseInt(req.query.x), parseInt(req.query.y))) {
         const response = getResponseData(
@@ -63,7 +62,7 @@ class IndexController {
       res.status(200).json({
         message: this.gameBoard.getMessage(),
         gameOver: this.gameBoard.isGameOver(),
-        grid: this.gameBoard.getBoardGrid(),
+        gridData: this.gameBoard.getBoardGrid(),
       });
     } catch (error) {
       next(error);

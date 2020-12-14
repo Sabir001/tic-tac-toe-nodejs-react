@@ -22,7 +22,7 @@ export const getResponseData = (message: string, gameBoard: any, log: string[]):
   return {
     message: msg,
     gameOver,
-    grid: gameBoard.getBoardGrid(),
-    log,
+    gridData: gameBoard.getBoardGrid(),
+    gameLog: log,
   };
 };

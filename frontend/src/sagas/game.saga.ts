@@ -15,7 +15,7 @@ function* resetGame() {
   if (response) {
     yield put({
       type: RESET_SUCCESS,
-      response,
+      data: response?.data,
     });
   } else {
     yield put({
@@ -28,11 +28,10 @@ function* resetGame() {
 function* tick({ payload }: any) {
   const endpoint = `${process.env.REACT_APP_API_BASE_URL}/tick?x=${payload.xAxis}&y=${payload.yAxis}`;
   const { response, error } = yield defaultApi(endpoint, 'GET');
-  console.log(response, error);
   if (response) {
     yield put({
       type: TICK_SUCCESS,
-      response,
+      data: response?.data,
     });
   } else {
     yield put({
