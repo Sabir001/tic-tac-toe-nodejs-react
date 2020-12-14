@@ -1,17 +1,29 @@
 import { NextFunction, Request, Response } from 'express';
 
+import GameBoard from '../game-core/GameBoard';
+
 class IndexController {
+  private gameBoard: any = null;
+  private gameLogs: string[] = [];
+  private started = false;
+
+  constructor() {
+    this.gameBoard = new GameBoard(3);
+  }
+
   public index = (req: Request, res: Response, next: NextFunction): void => {
+    this.gameBoard.setMessage('Hello');
     try {
-      res.sendStatus(200);
+      res.status(200).json({ message: this.gameBoard.getMessage() });
     } catch (error) {
       next(error);
     }
   };
 
   public reset = (req: Request, res: Response, next: NextFunction): void => {
+    this.gameBoard = new GameBoard(3);
     try {
-      res.status(200).json({ message: 'Game is reset to initial state' });
+      res.status(200).json({ message: 'Game resetted' });
     } catch (error) {
       next(error);
     }
