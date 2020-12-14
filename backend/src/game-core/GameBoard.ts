@@ -31,8 +31,8 @@ class GameBoard {
 
   public getFreeTurnsCount = (): number => {
     let count = 0;
-    this.grid.map((r: any) => {
-      count += r.filter((c: any) => c === null).length;
+    this.grid.forEach((row: any) => {
+      count += row.filter((column: any) => column === null).length;
     });
     return count;
   };

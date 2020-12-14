@@ -11,3 +11,18 @@ export const isEmpty = (value: any): boolean => {
     return false;
   }
 };
+
+export const getResponseData = (message: string, gameBoard: any, log: string[]): any => {
+  const gameOver = gameBoard.isGameOver();
+  let msg = message;
+  if (gameOver) {
+    const winner = gameBoard.getWinner();
+    msg = winner === null ? 'Match Drawn' : `${winner} won the match!`;
+  }
+  return {
+    message: msg,
+    gameOver,
+    grid: gameBoard.getBoardGrid(),
+    log,
+  };
+};
